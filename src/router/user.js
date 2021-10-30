@@ -8,6 +8,8 @@ router.use(bodyparser.urlencoded({extended:false}))
 router.use(bodyparser.json())
 const User=mongoose.model('User')
 
+const Name="Gaurav";
+
 router.post('/register', async(req,res)=>{
     const user = new User(req.body)
     console.log(req.body.email)
